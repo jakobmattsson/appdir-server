@@ -6,10 +6,6 @@ git pull || {
   echo >&2 "Pull failed, aborting."
   exit 1
 }
-npm test || {
-  echo >&2 "Test failed, aborting."
-  exit 1
-}
 jitsu deploy -r patch || {
   echo >&2 "Deployment failed, aborting."
   exit 1
